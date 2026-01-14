@@ -1,0 +1,226 @@
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('active');
+        } else {
+            backToTopButton.classList.remove('active');
+        }
+    });
+    
+    const registrationForm = document.getElementById('registrationForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const date = document.getElementById('date').value;
+            const participants = document.getElementById('participants').value;
+            const courseType = document.getElementById('courseType').value;
+            
+            if (!name || !email || !phone || !date || !participants || !courseType) {
+                showMessage(formMessage, 'Veuillez remplir tous les champs obligatoires.', 'error');
+                return;
+            }
+            
+            showMessage(formMessage, 'Envoi en cours...', 'info');
+            
+            setTimeout(() => {
+                showMessage(formMessage, 'Votre réservation a été envoyée avec succès ! Nous vous contacterons dans les 24h pour confirmation.', 'success');
+                registrationForm.reset();
+                
+                const btnSubmit = registrationForm.querySelector('.btn-submit');
+                btnSubmit.innerHTML = '<i class="fas fa-check"></i> Réservation envoyée !';
+                btnSubmit.style.backgroundColor = '#4CAF50';
+                
+                setTimeout(() => {
+                    btnSubmit.innerHTML = 'Envoyer ma réservation';
+                    btnSubmit.style.backgroundColor = '';
+                }, 3000);
+            }, 1500);
+        });
+    }
+    
+    const contactForm = document.getElementById('contactForm');
+    const contactMsgElement = document.getElementById('contactMessage');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            if (!name || !email || !message) {
+                showMessage(contactMsgElement, 'Veuillez remplir tous les champs obligatoires.', 'error');
+                return;
+            }
+            
+            showMessage(contactMsgElement, 'Envoi en cours...', 'info');
+            
+            setTimeout(() => {
+                showMessage(contactMsgElement, 'Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.', 'success');
+                contactForm.reset();
+                
+                const btnSubmit = contactForm.querySelector('.btn-submit');
+                btnSubmit.innerHTML = '<i class="fas fa-check"></i> Message envoyé !';
+                btnSubmit.style.backgroundColor = '#4CAF50';
+                
+                setTimeout(() => {
+                    btnSubmit.innerHTML = 'Envoyer le message';
+                    btnSubmit.style.backgroundColor = '';
+                }, 3000);
+            }, 1500);
+        });
+    }
+    
+    function showMessage(element, text, type) {
+        element.textContent = text;
+        element.className = 'form-message';
+        
+        if (type === 'success') {
+            element.style.backgroundColor = 'rgba(76, 175, 80, 0.1)';
+            element.style.color = '#4CAF50';
+            element.style.border = '1px solid #4CAF50';
+        } else if (type === 'error') {
+            element.style.backgroundColor = 'rgba(244, 67, 54, 0.1)';
+            element.style.color = '#f44336';
+            element.style.border = '1px solid #f44336';
+        } else {
+            element.style.backgroundColor = 'rgba(33, 150, 243, 0.1)';
+            element.style.color = '#2196F3';
+            element.style.border = '1px solid #2196F3';
+        }
+        
+        setTimeout(() => {
+            element.textContent = '';
+            element.style.backgroundColor = '';
+            element.style.border = '';
+        }, 5000);
+    }
+    
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        
+        const minDate = tomorrow.toISOString().split('T')[0];
+        dateInput.min = minDate;
+        
+        const defaultDate = new Date(today);
+        defaultDate.setDate(defaultDate.getDate() + 3);
+        const defaultDateStr = defaultDate.toISOString().split('T')[0];
+        dateInput.value = defaultDateStr;
+    }
+    
+    const cards = document.querySelectorAll('.card');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    cards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(card);
+    });
+    
+    const instructors = document.querySelectorAll('.instructor');
+    
+    instructors.forEach((instructor, index) => {
+        instructor.style.opacity = '0';
+        instructor.style.transform = 'translateY(20px)';
+        instructor.style.transition = `opacity 0.5s ease ${index * 0.2}s, transform 0.5s ease ${index * 0.2}s`;
+        
+        const instructorObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        instructorObserver.observe(instructor);
+    });
+    
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const text = this.querySelector('p').textContent;
+            alert(`Vous avez cliqué sur : ${text}`);
+        });
+    });
+    
+    const newsletterInput = document.querySelector('.newsletter input');
+    const newsletterButton = document.querySelector('.newsletter button');
+    
+    if (newsletterButton) {
+        newsletterButton.addEventListener('click', function() {
+            const email = newsletterInput.value;
+            
+            if (!email || !isValidEmail(email)) {
+                alert('Veuillez entrer une adresse email valide.');
+                return;
+            }
+            
+            newsletterButton.innerHTML = '<i class="fas fa-check"></i>';
+            newsletterButton.style.backgroundColor = '#4CAF50';
+            
+            setTimeout(() => {
+                newsletterButton.innerHTML = '<i class="fas fa-paper-plane"></i>';
+                newsletterButton.style.backgroundColor = '';
+                newsletterInput.value = '';
+                alert('Merci pour votre inscription à notre newsletter !');
+            }, 1500);
+        });
+    }
+    
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+    
+    const currentYear = new Date().getFullYear();
+    const yearElement = document.querySelector('.footer-bottom p:first-child');
+    if (yearElement) {
+        yearElement.innerHTML = yearElement.innerHTML.replace('2023', currentYear);
+    }
+    
+    console.log('Site Atlantic Surf School chargé avec succès !');
+});

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlantic Surf School - École de Surf au Maroc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-water"></i> Atlantic Surf School</h1>
+                <p class="tagline">Ride the Moroccan waves</p>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#ecole">Notre École</a></li>
+                    <li><a href="#cours">Cours & Tarifs</a></li>
+                    <li><a href="#moniteurs">Moniteurs</a></li>
+                    <li><a href="#inscription">Inscription</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h2>Vivez l'expérience surf au Maroc</h2>
+            <p>Des vagues exceptionnelles, des moniteurs certifiés, un cadre unique</p>
+            <a href="#inscription" class="btn-hero">Je réserve ma session</a>
+        </div>
+    </section>
+
+    <section id="ecole" class="section">
+        <div class="container">
+            <h2 class="section-title">Notre École de Surf</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Atlantic Surf School est située à Taghazout, sur la côte atlantique du Maroc, réputée pour ses spots de surf de classe mondiale. Nous accueillons surfeurs débutants et confirmés depuis plus de 10 ans.</p>
+                    <p>Notre équipe de moniteurs diplômés et passionnés vous garantit une expérience safe et mémorable dans les vagues marocaines.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Sécurité maximale</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <h4>Moniteurs certifiés</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-sun"></i>
+                            <h4>300 jours de soleil/an</h4>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h4>Groupes réduits</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-school"></i>
+                        <p>Notre école à Taghazout, Maroc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cours" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Cours & Tarifs</h2>
+            <p class="section-subtitle">Tous nos forfaits incluent le matériel (planche, combinaison) et l'assurance</p>
+            
+            <div class="pricing-cards">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Découverte</h3>
+                        <div class="price">450 DH</div>
+                        <p class="price-period">/ séance de 2h</p>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 1 séance de 2 heures</li>
+                            <li><i class="fas fa-check"></i> Initiation aux bases</li>
+                            <li><i class="fas fa-check"></i> Matériel inclus</li>
+                            <li><i class="fas fa-check"></i> Moniteur dédié</li>
+                            <li><i class="fas fa-times"></i> Vidéo analyse</li>
+                        </ul>
+                        <a href="#inscription" class="btn-card">Réserver</a>
+                    </div>
+                </div>
+                
+                <div class="card featured">
+                    <div class="card-badge">Populaire</div>
+                    <div class="card-header">
+                        <h3>Pack 5 sessions</h3>
+                        <div class="price">1 950 DH</div>
+                        <p class="price-period">/ 5 séances de 2h</p>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 5 séances de 2 heures</li>
+                            <li><i class="fas fa-check"></i> Progression garantie</li>
+                            <li><i class="fas fa-check"></i> Matériel inclus</li>
+                            <li><i class="fas fa-check"></i> Vidéo analyse (1x)</li>
+                            <li><i class="fas fa-check"></i> Photos offertes</li>
+                        </ul>
+                        <a href="#inscription" class="btn-card">Réserver</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Stage semaine</h3>
+                        <div class="price">3 500 DH</div>
+                        <p class="price-period">/ 5 jours complets</p>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 5 jours de surf</li>
+                            <li><i class="fas fa-check"></i> Théorie & pratique</li>
+                            <li><i class="fas fa-check"></i> Matériel haut de gamme</li>
+                            <li><i class="fas fa-check"></i> Vidéo analyse (3x)</li>
+                            <li><i class="fas fa-check"></i> Album photos complet</li>
+                        </ul>
+                        <a href="#inscription" class="btn-card">Réserver</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-info">
+                <h3>Informations supplémentaires</h3>
+                <ul>
+                    <li>Les cours particuliers sont disponibles à 600 DH/heure</li>
+                    <li>Location de matériel seul : à partir de 200 DH/jour</li>
+                    <li>10% de réduction pour les groupes de 4 personnes ou plus</li>
+                    <li>Forfaits enfants (-12 ans) : -20% sur tous les tarifs</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery-section">
+        <div class="container">
+            <h2 class="section-title">Notre univers</h2>
+            <p class="section-subtitle">Découvrez les spots et l'ambiance de notre école</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <i class="fas fa-surfing"></i>
+                        <p>Taghazout</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <i class="fas fa-users"></i>
+                        <p>Cours collectif</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <i class="fas fa-sun"></i>
+                        <p>Sunset session</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <i class="fas fa-swimmer"></i>
+                        <p>Notre matériel</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <p>Encadrement pro</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="img-placeholder">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <p>Notre plage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="moniteurs" class="section">
+        <div class="container">
+            <h2 class="section-title">Nos Moniteurs</h2>
+            <div class="instructors">
+                <div class="instructor">
+                    <div class="instructor-img">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Karim</h3>
+                    <p class="instructor-title">Directeur technique</p>
+                    <p class="instructor-bio">15 ans d'expérience, diplômé ISA. Spécialiste des grosses vagues.</p>
+                </div>
+                <div class="instructor">
+                    <div class="instructor-img">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Leila</h3>
+                    <p class="instructor-title">Formatrice débutants</p>
+                    <p class="instructor-bio">8 ans d'expérience, pédagogue reconnue pour l'initiation.</p>
+                </div>
+                <div class="instructor">
+                    <div class="instructor-img">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Youssef</h3>
+                    <p class="instructor-title">Coach compétition</p>
+                    <p class="instructor-bio">Ancien champion du Maroc, accompagne les surfeurs confirmés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inscription" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Inscription & Réservation</h2>
+            <div class="form-container">
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Date souhaitée *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="participants">Nombre de participants *</label>
+                            <select id="participants" name="participants" required>
+                                <option value="">Sélectionnez</option>
+                                <option value="1">1 personne</option>
+                                <option value="2">2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5 personnes ou plus</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="courseType">Type de cours *</label>
+                        <select id="courseType" name="courseType" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="decouverte">Découverte (450 DH)</option>
+                            <option value="pack5">Pack 5 sessions (1950 DH)</option>
+                            <option value="stage">Stage semaine (3500 DH)</option>
+                            <option value="prive">Cours particulier (600 DH/h)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message supplémentaire</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Niveau de surf, âge des participants, demandes spéciales..."></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">J'accepte les conditions générales *</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Envoyer ma réservation</button>
+                    <p id="formMessage" class="form-message"></p>
+                </form>
+                
+                <div class="form-info">
+                    <h3><i class="fas fa-info-circle"></i> Informations importantes</h3>
+                    <ul>
+                        <li><i class="fas fa-clock"></i> <strong>Horaires des cours :</strong> 9h-11h / 11h-13h / 15h-17h</li>
+                        <li><i class="fas fa-calendar"></i> <strong>Réservation :</strong> Au moins 48h à l'avance</li>
+                        <li><i class="fas fa-ban"></i> <strong>Annulation :</strong> Gratuite jusqu'à 24h avant</li>
+                        <li><i class="fas fa-user-check"></i> <strong>Âge minimum :</strong> 8 ans (accompagné)</li>
+                        <li><i class="fas fa-swimmer"></i> <strong>Prérequis :</strong> Savoir nager 50m</li>
+                    </ul>
+                    
+                    <div class="contact-info">
+                        <h4><i class="fas fa-phone"></i> Contact rapide</h4>
+                        <p><strong>Téléphone :</strong> +212 5 XX XX XX XX</p>
+                        <p><strong>Email :</strong> info@atlanticsurfschool.ma</p>
+                        <p><strong>Adresse :</strong> Plage de Taghazout, Agadir, Maroc</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact & Horaires</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3><i class="fas fa-map-marker-alt"></i> Nous trouver</h3>
+                    <div class="map-placeholder">
+                        <div class="map-content">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Plage de Taghazout<br>Agadir, Maroc</p>
+                            <a href="https://maps.google.com" target="_blank" class="btn-map">Voir sur Google Maps</a>
+                        </div>
+                    </div>
+                    
+                    <div class="schedule">
+                        <h3><i class="fas fa-clock"></i> Horaires d'ouverture</h3>
+                        <table>
+                            <tr>
+                                <td>Lundi - Vendredi</td>
+                                <td>8h00 - 19h00</td>
+                            </tr>
+                            <tr>
+                                <td>Samedi</td>
+                                <td>8h00 - 18h00</td>
+                            </tr>
+                            <tr>
+                                <td>Dimanche</td>
+                                <td>9h00 - 17h00</td>
+                            </tr>
+                            <tr>
+                                <td>Jours fériés</td>
+                                <td>Sur réservation</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3><i class="fas fa-envelope"></i> Nous contacter</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Nom *</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Sujet</label>
+                            <input type="text" id="contactSubject" name="contactSubject">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Envoyer le message</button>
+                        <p id="contactMessage" class="form-message"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Atlantic Surf School</h3>
+                    <p>École de surf certifiée à Taghazout, Maroc. Vivez une expérience unique dans les vagues atlantiques.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#cours">Cours & Tarifs</a></li>
+                        <li><a href="#inscription">Inscription</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Plage de Taghazout, Agadir</p>
+                    <p><i class="fas fa-phone"></i> +212 5 XX XX XX XX</p>
+                    <p><i class="fas fa-envelope"></i> info@atlanticsurfschool.ma</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez-vous pour recevoir nos offres spéciales</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Votre email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Atlantic Surf School. Tous droits réservés.</p>
+                <p>Site créé dans le cadre du cours de Programmation Web - Filière IA</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#accueil" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>
